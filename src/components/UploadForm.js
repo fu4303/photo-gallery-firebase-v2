@@ -21,6 +21,7 @@ function UploadForm() {
   return (
     <form>
       <input type="file" onChange={handleChange} />
+      <span>+</span>
       <div className="output">
         {error && <div className="error">{error}</div>}
         {file && <div>{file.name}</div>}
