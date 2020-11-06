@@ -21,8 +21,10 @@ function UploadForm() {
 
   return (
     <form>
-      <input type="file" onChange={handleChange} />
-      <span>+</span>
+      <label>
+        <input type="file" onChange={handleChange} />
+        <span>+</span>
+      </label>
       <div className="output">
         {error && <div className="error">{error}</div>}
         {file && <ProgressBar file={file} setFile={setFile} />}
