@@ -1,6 +1,6 @@
-import * as firebase from "firebase";
-import "firebase/storage";
-import "firebase/firestore";
+import firebase from "firebase/app";
+import 'firebase/storage'
+import 'firebase/firestore'
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
@@ -17,5 +17,6 @@ firebase.initializeApp(firebaseConfig);
 
 const photoStorage = firebase.storage();
 const photoFirestore = firebase.firestore();
+const timestamp = firebase.firestore.FieldValue.serverTimestamp;
 
-export { photoStorage, photoFirestore };
+export { photoStorage, photoFirestore, timestamp };
